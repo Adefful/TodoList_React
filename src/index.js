@@ -8,11 +8,16 @@ import AppHeader from "./components/app-header";
 import TodoList from "./components/todo-list";
 
 function App() {
+  const tododata = [
+    { label: "Drink", important: false, id: 1 },
+    { label: "Drink more", important: true, id: 2 },
+    { label: "and Drink", important: false, id: 3 }
+  ];
   return (
     <div>
       <AppHeader />
       <SearchPanel />
-      <TodoList />
+      <TodoList todos={tododata} />
     </div>
   );
 }
